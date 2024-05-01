@@ -1,9 +1,11 @@
 import "./style.css"
+import pawnImg from './assets/pawn.png'
 import {home} from "./home.js"
 import {menu} from "./menu.js"
 import {about} from "./about.js"
 
 const body = document.querySelector('body')
+
 body.appendChild(document.createElement('header'))
 body.appendChild(document.createElement('div'))
 body.firstChild.appendChild(document.createElement('nav'))
@@ -15,37 +17,54 @@ function navBar() {
     let menuBtn = document.createElement('button')
     let aboutBtn = document.createElement('button')
 
+    navElement.appendChild(createPic(pawnImg))
     homeBtn.appendChild(createP('Home'))
     homeBtn.addEventListener('click', () => {
         clearBody()
-        home()
+        homeBtn.classList.add('selected')
+        home.build(content)
     })
     navElement.appendChild(homeBtn)
 
     menuBtn.appendChild(createP('Menu'))
     menuBtn.addEventListener('click', () => {
         clearBody()
-        menu()
+        menuBtn.classList.add('selected')
+        menu.build(content)
     })
     navElement.appendChild(menuBtn)
 
     aboutBtn.appendChild(createP('About'))
     aboutBtn.addEventListener('click', () => {
         clearBody()
-        about()
+        aboutBtn.classList.add('selected')
+        about.build(content)
     })
     navElement.appendChild(aboutBtn)
+    navElement.appendChild(createPic(pawnImg))
+
+    home.build(content)
+    homeBtn.classList.add('selected')
 }
 
 function clearBody() {
+    for (let i = 0; i < 5; i++) {
+        navElement.children[i].classList.remove('selected')
+    }
     while(content.firstChild) {
         content.removeChild(content.firstChild)
     }
 }
 
 function createP(Text) {
-    let p = document.createElement('p')
+    const p = document.createElement('p')
     p.textContent = Text
     return p
 }
+function createPic(src) {
+    const img = new Image()
+    img.src = src
+    return img
+}
 navBar()
+

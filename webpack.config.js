@@ -7,8 +7,15 @@ module.exports = {
           {
             test: /\.css$/i,
             use: ["style-loader", "css-loader"],
-            
           },
+          {
+            test: /\.(png|jpe?g|gif)$/i,
+            use: [
+              {
+                loader: 'file-loader',
+              },
+            ]
+          }
         ],
       },
   entry: './src/index.js',

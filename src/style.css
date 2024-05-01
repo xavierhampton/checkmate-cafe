@@ -1,3 +1,12 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-image: url('./assets/checkerboard.png');
+    background-size: 3%;
+    
+}
 nav {
     display: flex;
     justify-content: center;
@@ -13,12 +22,16 @@ button {
     border: 2px black solid;
     box-shadow: 0px 4px 4px rgba(0,0,0,.4);
 }
-button:hover:not(.selected) {
+button:hover {
+    scale:1.04;
     cursor:pointer;
-    background-color: rgba(255, 150, 0, 0.1);
+    transition: .5s;
+}
+button:hover:not(.selected) {
+    background-color: hwb(147 62% 13%);
 }
 .selected {
-    background-color: rgba(255,150,0,0.4);
+    background-color: hwb(135 11% 12%);
 }
 img {
     width: 90px;
@@ -29,4 +42,31 @@ nav > *:first-child {
 }
 nav > *:last-child {
     transform: rotate(25deg);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 55px;
+}
+.page {
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid black;
+    background-color:white;
+    width: 600px;
+    height: 500px;
+    align-items:  center;
+    border-radius: 20px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    border-bottom: 1px solid black;
+}
+.subsection {
+    
 }

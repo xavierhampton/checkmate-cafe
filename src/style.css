@@ -197,6 +197,6 @@ nav > *:last-child {
 .menu-image {
     min-width: 140px;
     min-height: 140px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 20px;
 }

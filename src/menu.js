@@ -1,26 +1,20 @@
 class menu {
-    static createP(Text, cls) {
-        let p = document.createElement('p')
-        p.textContent = Text
-        p.classList.add(cls)
-        return p
+    static createElement(e, t, c) {
+        const tmp = document.createElement(e)
+        tmp.textContent = t
+        if (c){
+            tmp.classList.add(c)
+        }
+        return tmp
     }
-    static createDiv(cls) {
-        const d = document.createElement('div')
-        d.classList.add(cls)
-        return d
-    }
-    static createh1(Text, cls) {
-        const h = document.createElement('h1')
-        h.textContent = Text
-        h.classList.add(cls)
-        return h
+    static makeItem(t,img) {
+        return
     }
 
     static build(content) {
-        const container = this.createDiv('container')
-        const page = this.createDiv('page')
-        page.appendChild(this.createh1('~ The Menu ~', 'title'))
+        const container = this.createElement('div','','container')
+        const page = this.createElement('div','','page')
+        page.appendChild(this.createElement('h1','~ The Menu ~', 'title'))
 
 
 

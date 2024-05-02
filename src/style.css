@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('./assets/checkerboard.png');
-    background-size: 3%;
+    background-size: 50px;
     
 }
 nav {
@@ -42,7 +42,6 @@ nav > *:first-child {
 nav > *:last-child {
     transform: rotate(25deg);
 }
-
 .container {
     display: flex;
     align-items: center;
@@ -114,10 +113,38 @@ nav > *:last-child {
     margin-left: auto;
     width:  90px;
     height: 35px;
+    font-size: 12px;
+    transition: 0.1s;
 }
 .location > p {
     border-bottom: 1px solid black;
 }
 .location > p:hover {
     cursor: pointer ;
+}
+.statement-container {
+    margin-right: 40px;
+    margin-left: 60px;
+    align-items: center;
+    justify-content: center;
+}
+.statement {
+    padding: 10px;
+    font-size: 25px;
+    margin-top: 0px;
+}
+.fake-link, a {
+    font-size: 20px;
+    text-decoration: underline;
+    color:darkslateblue;
+    text-align: center;
+    margin-top: -10px;
+}
+.contact-header {
+    font-size: 26px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.fake-link {
+    cursor: pointer;
 }

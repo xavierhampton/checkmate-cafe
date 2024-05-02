@@ -148,3 +148,55 @@ nav > *:last-child {
 .fake-link {
     cursor: pointer;
 }
+.food-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 450px;
+    height: 200px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.inner-container {
+    display: flex;
+    gap: 20px;
+
+}
+.food-title {
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+.h-inner-container {
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+    align-items: center;
+}
+.order-button {
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    margin-top: -10px;
+    margin-right: 10px;
+    background-color: hwb(147 62% 13%);
+    font-weight: 600;
+    
+}
+.order-button:hover {
+    transition: 0.2s;
+}
+.food-description {
+    width: 250px;
+    margin-top: -15px;
+    font-size:18px;
+}
+.menu-image {
+    min-width: 140px;
+    min-height: 140px;
+    border: 1px solid black;
+    border-radius: 20px;
+}

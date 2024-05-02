@@ -26,7 +26,7 @@ class about {
     static buildContact() {
         const container = this.createElement('div','','hours-container')
         container.appendChild(this.createElement('p','Email','contact-header'))
-        container.appendChild(this.createElement('p','CCuisine@notreal.com', 'fake-link'))
+        container.appendChild(this.createElement('p','CheckmateCafe@notreal.com', 'fake-link'))
         container.appendChild(this.createElement('p','Phone','contact-header'))
         container.appendChild(this.createElement('p','123-456-7890', 'fake-link'))
         container.appendChild(this.createElement('p','Github','contact-header'))

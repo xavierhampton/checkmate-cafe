@@ -33,8 +33,8 @@ class home {
     static build(content) {
         const container = this.createElement('div','','container')
         const page = this.createElement('div','','page')
-        page.appendChild(this.createElement('h1','~ Chess Cuisine ~', 'title'))
-        page.appendChild(this.createElement("p",'"Chess Cuisine is not just a place to dine; it is a sanctuary where minds meet, battles are waged, and friendships are forged over the timeless game of chess."','quote'))
+        page.appendChild(this.createElement('h1','~ Checkmate Cafe ~', 'title'))
+        page.appendChild(this.createElement("p",'"Checkmate Cafe is not just a place to dine; it is a sanctuary where minds meet, battles are waged, and friendships are forged over the timeless game of chess."','quote'))
         page.appendChild(this.createElement('p','~ Business Hours ~', 'subtitle'))
         page.appendChild(this.buildHours())
         page.appendChild(this.createElement('p','~ Locations ~', 'subtitle'))
